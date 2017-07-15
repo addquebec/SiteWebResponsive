@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <!-- En-tête de la page -->
         <meta charset="utf-8" />
-        <title>Titre</title>
+        <meta name="robots" content="index">
+        <title>Académie québécoise d'art du déplacement : Accueil</title>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <script src="script.js"></script>
+        
+        <!--<img src="img/logoNoir.png" class="logo" alt="logo ADD" />-->
+        
     </head>
 
     <body>
         <!-- Corps de la page -->
+        <div class="topnav" id="myTopnav">
+            <ul>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="histoire.html">Histoire</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gym.html">Gym</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="equipe.html">Équipe</a></li>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </ul>
+        </div>
     </body>
+    
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+    
 </html>
