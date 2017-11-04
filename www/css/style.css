@@ -1,35 +1,182 @@
-img{   
-height: 100px;    
+*{
+    font-family: verdana;
+    margin: 0;
 }
 
-ul {
+body{
+    background: #eee;
+    transition: background-color .5s;
+}
+
+.logo{
+    background : url('../img/logo/logoBlanc.png'); 
+    background-repeat:no-repeat;
+    height: 62px;
+    width: 62px;
+
+}
+
+/*Side menu navigation menu*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+
+/*Style pour le menu de navigation*/
+
+
+nav{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.65), 
+      rgba(0, 0, 0, 0.65)
+    ),url('../img/PhotoADD-36.jpg');
+    background-repeat:no-repeat;
+    background-size: 100%;
+    //height: 300px;
+}
+
+nav ul{
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display:inline-block;
-    width: 100%;
+}
+
+ul li:first-child {
+  margin-right: auto;
+}
+
+nav a{
+    text-decoration: none;
+    //text-align: center;
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+}
+
+nav .separateur{
+    color: #ff6600;
+    display: block;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+nav a:hover:not(.logo){
+    background-color: #ff7733;
     
 }
 
-li {
-    float: left;
+nav .fa-bars.open{
+    visibility: hidden;
+} 
+
+nav .fa-bars.close{
+    visibility: visible;
+} 
+
+/*Style pour ordinateur*/
+
+@media screen and (min-width: 480px){
+       
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+        margin:0;
+    }
+    
+    nav .burgerDiv{
+        visibility: hidden;
+        height: 0;
+        margin:0;
+    }
+    
+    .sidenav {
+        padding-top: 15px;
+    }
+    
+    .sidenav a {
+        font-size: 18px;
+    }
+    
+    .panneauPrincipal{
+        display: flex;
+    }
+    
+    .panneauPrincipal div {
+        border-color: black;
+        border: 1px solid;
+        width:33%;
+        //height: 100%;
+        text-align: center;
+        //margin-top: 10px;
+    }
+    
+    .aujourdhui{
+        background: linear-gradient(
+      rgba(0, 0, 0, 0.75), 
+      rgba(0, 0, 0, 0.75)
+    ),url('../img/PhotoADD-1.jpg');
+        background-size: cover;
+        color: whitesmoke;
+    }
+    
+    
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+    
+/*Style pour mobile*/
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #ff9933;
+@media screen and (max-width: 480px){
+    
+    nav .fa-bars{
+        color: #ffffff;
+        font-size:25px ;
+        cursor:pointer;
+        float: right;
+        padding-right: 10px;
+        
+    }
+         
+    nav ul{
+        overflow: hidden;
+        width: 100%;
+        margin:0;
+        height: 0;
+    }
+    
 }
-
-.active {
-    background-color: #ff9933;
-}
+    
