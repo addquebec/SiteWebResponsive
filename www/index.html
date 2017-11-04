@@ -1,42 +1,92 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
     <head>
-        <!-- En-tête de la page -->
         <meta charset="utf-8" />
-        <meta name="robots" content="index">
-        <title>Académie québécoise d'art du déplacement : Accueil</title>
-        
-        <link rel="stylesheet" href="css/style.css">
-        <script src="script.js"></script>
-        
-        <!--<img src="img/logoNoir.png" class="logo" alt="logo ADD" />-->
-        
+        <title>Accueil - Académie Québécoise d'art du Déplacement</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
     </head>
+    <script src="https://use.fontawesome.com/e9e449a9b1.js"></script>
+    
 
     <body>
-        <!-- Corps de la page -->
-        <div class="topnav" id="myTopnav">
-            <ul>
-                <li><a href="cours.html">Cours</a></li>
-                <li><a href="histoire.html">Histoire</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gym.html">Gym</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="equipe.html">Équipe</a></li>
-                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-            </ul>
+        
+        <!-- Menu de navigation sur le côté -->
+        <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cours.html">Cours</a>
+            <a href="histoire.html">Histoire</a>
+            <a href="services.html">Services</a>
+            <a href="gym.html">Gym</a>
+            <a href="contact.html">Contact</a>
+            <a href="equipe.html">Équipe</a>
+        </div>
+
+        <!-- Panneau principal -->
+        <div id="main">
+            
+            <!-- Menu de navigation -->
+            <div class="menu">
+                <nav id="navid">
+                    <div class="burgerDiv">
+                        <i id="iconeMenu" class="fa fa-bars" onclick="openNav()"></i>
+                    </div>
+                        <div class="menuListe">
+                            <ul>
+                                <li><a href="index.html" class="logo"></a></li>
+                                <li><a href="cours.html">Cours</a></li>
+                                <li><a href="histoire.html">Histoire</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gym.html">Gym</a></li>
+                                <li class="separateur">|</li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="equipe.html">Équipe</a></li>  
+            
+                            </ul>
+                        </div>
+                </nav>
+            </div>
+            <!--
+            <div class="panneauPrincipal">
+                
+                <div class="aujourdhui">
+                    <h1>Aujourd'hui</h1>
+                    <div>
+                        <a href="">À propos</a>
+                        <a href="">Inscription</a>
+		            </div>
+                </div>
+
+
+                <div class="gym">
+                    <h1>La salle</h1>  
+                </div>
+
+                <div class="video">
+                    <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+                        <source src="video/2E4A8114.mp4" type='video/mp4'>
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a web browser that
+                            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video> 
+                </div> 
+                
+            </div>
+            
+            -->
+
+
+            <header>
+                <!-- Placez ici le contenu de l'en-tête de votre page -->
+            </header>
+
+            <footer>
+                <!-- Placez ici le contenu du pied de page -->
+            </footer>
         </div>
     </body>
-    
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
-    
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
 </html>
